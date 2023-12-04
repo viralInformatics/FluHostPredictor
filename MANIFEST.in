@@ -1,0 +1,5 @@
+include README.md
+recursive-include data *.*
+recursive-include model *.*
+recursive-include tests *.*
+
