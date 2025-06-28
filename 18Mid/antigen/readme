@@ -1,0 +1,5 @@
+此文件夹是用于一站式预测预警系统中计算病毒之间的抗原关系。
+predAV.pl是主要的函数，调用的子函数都位于tool.pm和naiveBayesian2.pm中，需要预先安装的软件包括mafft,见tool.pm中的align2refer函数。
+
+/modelData/文件夹是用于预算抗原关系的各个亚型的模型/model/以及用于帮助比对的标准序列/referSeq/
+

@@ -1,0 +1,14 @@
+
+Standard Output:
+False
+
+Standard Error:
+Error: adaptation is not a valid file or directory
+Traceback (most recent call last):
+  File "/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/bin/fluhp", line 8, in <module>
+    sys.exit(main())
+  File "/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/fluhp/fluhp.py", line 1757, in main
+    args.prefix
+  File "/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/fluhp/predict_host.py", line 238, in predict_new_data
+    processed_data.set_index("Strain ID", inplace = True)
+AttributeError: 'NoneType' object has no attribute 'set_index'

@@ -1,0 +1,233 @@
+#!/usr/bin/perl
+use warnings;
+use strict;
+use tool;
+
+
+
+###################################################################################
+#此脚本与DNA2protein5.pl的差别在于用来做blast的库分别做了在96%水平的去冗余
+
+#输入流感病毒的DNA序列，输出为翻译好的蛋白序列
+#蛋白序列在基因序列名字后面加上蛋白名字，特别是对于MP和NS蛋白
+#基本思路如下：
+#首先，对于每条DNA序列做blastx,得到它的蛋白序列和所属基因；
+#其次，如果某条DNA序列属于编码两条蛋白的序列，如MP,NS,PA,PB1-F2,则
+#继续用该DNA序列对于另外一个只包含M2，NS2，PA-X和PB1-F2的库做blastX，得到
+#它的编码序列
+#输入参数如下：
+#$infile   需要翻译的DNA序列文件名（完整路径）
+#$blastDir 安装blast工具的目录，需要在最后加“/"
+#$blastLibraryDir  #压缩包中的forblast文件夹
+#$tempDir   #临时文件夹目录
+#$referSeqDir   ##压缩包中的data文件夹
+#$proteinSeqOutfile  #输出文件
+
+#运行示例如下：
+#perl DNA2protein6.pl ./temp/DNAseq /usr/bin/ ./forblast/ ./temp/ ./data/ ./temp/proteinSeq
+####################################################################################
+my ($infile,$blastDir,$blastLibraryDir,$tempDir,$referSeqDir,$proteinSeqOutfile)=@ARGV;
+if(scalar @ARGV < 6){
+	die"error!Please input the DNA sequence file,blastDir,blastLibraryDir,tempDir,referSeqDir and the outfile for protein sequences\n";
+}
+my $start=time();
+
+
+#首先，读取需要翻译的DNA序列
+open(IN,$infile)or die"$!";
+my @allid;
+my $seqRef;
+my $id;
+my $new2old;
+my $newSeqNum=1;
+while(<IN>){
+	s/^[\r\t\s\n]{1,}//;
+	s/[\r\t\s\n]{1,}$//;
+	chomp;
+	next if(/^$/);
+	if(/^>(.+)$/){
+		my $oldID=$1;
+		$id="Userseq$newSeqNum";
+		$new2old->{$id}=$oldID;
+		$newSeqNum++;
+		push(@allid,$id);
+	}else{
+		s/-/N/g;  #处理序列中包含gap的情况
+		my @line=split(//,uc($_));
+		push(@{$seqRef->{$id}},@line);
+	}
+}
+close IN or die"$!";
+
+
+#其次，对于不包含M2，NS2，PB1-F2和PA-X的库做blastx
+my $DNAseqFile=$tempDir."DNAseq";
+open(OUT,">$DNAseqFile")or die"$!";
+foreach my$id(keys %{$seqRef}){
+	print OUT ">$id\n",join("",@{$seqRef->{$id}}),"\n";
+}
+close OUT or die"$!";
+
+my $database1=$blastLibraryDir."blastLibrary1";
+my $blastOutfile1=$tempDir."blastOut1";
+
+`$blastDir"blastall" -p blastx -i $DNAseqFile -d $database1 -o $blastOutfile1 -a 2 -F F -v 1 -b 1`;
+my ($id2seq1,$id2info1)=getProteinFromBlastx($blastOutfile1);
+#id2seq->{$id}=$oneseq
+#id2info->{$id}->{'target'}=$target (ID_gene_type)
+#id2info->{$id}->{'start'}=$start
+#id2info->{$id}->{'end'}=$end
+
+#接下来，对于输入序列中的M，NS，PB1和PA基因，继续对第二个库做blastx
+my @remain1;
+my @remain2;
+foreach my$id(keys %{$id2info1}){
+	my $target=$id2info1->{$id}->{'target'};
+	my @targetName=split(/\_/,$target);
+	my $gene=$targetName[-2];
+	my $type=$targetName[-1];
+
+	#如果是A型流感的M，NS和PA基因，或者B/C型的NS基因，则通过多序列比对的方法来确定第二个编码区
+	if( ($type eq 'A' && ($gene=~/M/i or $gene=~/NS/i or $gene=~/PA/i) ) or ($type =~/[BC]/i && $gene=~/NS/i) ){
+		push(@remain1,$id);
+
+	#如果是A型流感的PB1基因，或者B/C型的M基因，则继续通过blast的方法确定第二个编码区
+	}elsif( ($type =~/[BC]/i && $gene=~/M/i) or ($type eq 'A' && $gene=~/PB1/i) ){
+		push(@remain2,$id);
+	}
+}
+
+#如果存在A型流感的PB1基因，或者B/C型的M基因，则继续通过blast的方法确定第二个编码区
+my ($id2seq2,$id2info2);
+if(scalar @remain2 > 0){
+	my $DNAseqFile_remain2=$tempDir."DNAseq_remain2";
+	open(OUT,">$DNAseqFile_remain2")or die"$!";
+	foreach my$id(@remain2){
+		print OUT ">$id\n",join("",@{$seqRef->{$id}}),"\n";
+	}
+	close OUT or die"$!";
+	
+	my $database2=$blastLibraryDir."blastLibrary2";
+	my $blastOutfile2=$tempDir."blastOut2";
+
+	`$blastDir"blastall" -p blastx -i $DNAseqFile_remain2 -d $database2 -o $blastOutfile2 -a 2 -F F -v 1 -b 1`;
+
+	($id2seq2,$id2info2)=getProteinFromBlastx($blastOutfile2);
+}
+
+#如果存在A型流感的M，NS和PA基因，或者B/C型的NS基因，则通过多序列比对的方法来确定第二个编码区，然后直接翻译出来
+my $id2seq3;
+my $id2info3;
+if(scalar @remain1 > 0){
+	my $geneRef; #先对基因进行分类
+	foreach my$id(@remain1){
+		my $target=$id2info1->{$id}->{'target'};
+		my @targetName=split(/\_/,$target);
+		my $gene=$targetName[-2];
+		my $type=$targetName[-1];
+		push(@{$geneRef->{$type}->{$gene}},$id);
+	}
+	foreach my$type(sort keys %{$geneRef}){
+		foreach my$gene(sort keys %{$geneRef->{$type}}){
+			my @id=@{$geneRef->{$type}->{$gene}};
+			my $DNAseqFile_remain1=$tempDir."DNAseq_remain1";
+			open(OUT,">$DNAseqFile_remain1")or die"$!";
+			foreach my$id(@id){
+				print OUT ">$id\n",join("",@{$seqRef->{$id}}),"\n";
+			}
+			close OUT or die"$!";
+
+			my $DNAseqFile_remain1_align=$tempDir."DNAseq_remain1_align";
+			my $geneNew=$gene; #为了处理NS1，NS2，M1，M2，PA-X的问题，它们对应的基因分别是NS，M和PA，因此需要处理后面的后缀，方便读取参考序列文件
+			$geneNew=~s/[0-9]{1,}$//ig;
+			$geneNew=~s/\-X$//ig;
+			my $aligned2original=align2referSeq2($DNAseqFile_remain1,$type,$geneNew,$referSeqDir,$tempDir,$DNAseqFile_remain1_align); #把用户的序列变成与参考序列一样
+			my ($secondCodingRef,$codingRegionRef)=getSecondCodingRegion2($DNAseqFile_remain1_align,$type,$gene,$aligned2original);#获取第二个编码区序列
+			foreach my$id(keys %{$secondCodingRef}){
+				my $codingSeq=join("",@{$secondCodingRef->{$id}});
+				my $proteinSeq=DNA2protein($codingSeq);
+				$proteinSeq=~s/^\-{1,}//;  #去掉前面和后面的gap
+				$proteinSeq=~s/\-{1,}$//;
+				$id2seq3->{$id}=$proteinSeq;
+				$id2info3->{$id}=$codingRegionRef->{$id};
+			}
+		}
+	}
+}
+
+#最后，输出所有蛋白序列，在每个序列名字后面加上其编码的蛋白
+open(OUT,">$proteinSeqOutfile")or die"$!";
+foreach my$id(keys %{$id2seq1}){
+	my $target=$id2info1->{$id}->{'target'};
+	my @targetName=split(/\_/,$target);
+	my $gene=$targetName[-2];
+	my $type=$targetName[-1];
+	
+	my $old=$new2old->{$id};
+	my $geneName=$gene;
+	if($gene=~/M/i){
+		if($type=~/A/i){
+			$geneName="M1";
+		}elsif($type=~/B/i){
+			$geneName="BM1";
+		}elsif($type=~/C/i){
+			$geneName="CM1";
+		}
+	}elsif($gene=~/NS/i){
+		$geneName="NS1";
+	}
+	my $seqName=$old."_".$geneName;
+	my $codingStart1=$id2info1->{$id}->{'start'};  #增加编码区对应的区域
+	my $codingEnd1=$id2info1->{$id}->{'end'};
+	$seqName.="(".$codingStart1."..".$codingEnd1.")";
+
+	unless($id2seq1->{$id} eq ''){    #需要考虑序列为空的情况
+		print OUT ">$seqName\n",$id2seq1->{$id},"\n";
+	}
+	if(exists $id2seq2->{$id}){
+		my $geneName=$gene;
+		if($gene=~/M/i){
+			if($type=~/B/i){
+				$geneName="BM2";
+			}elsif($type=~/C/i){
+				$geneName="CM2";
+			}
+		}elsif($gene=~/PB1/i){
+			$geneName="PB1-F2";
+		}
+		my $seqName=$old."_".$geneName;
+
+		my $codingStart2=$id2info2->{$id}->{'start'};  #增加编码区对应的区域
+		my $codingEnd2=$id2info2->{$id}->{'end'};
+		$seqName.="(".$codingStart2."..".$codingEnd2.")";
+
+		unless($id2seq2->{$id} eq ''){         #需要考虑序列为空的情况
+			print OUT ">$seqName\n",$id2seq2->{$id},"\n";
+		}
+	}
+
+	if(exists $id2seq3->{$id}){
+		my $geneName=$gene;
+		if($gene=~/M/i){
+			$geneName="M2";
+		}elsif($gene=~/PA/i){
+			$geneName="PA-X";
+		}elsif($gene=~/NS/i){
+			$geneName="NS2";
+		}
+		my $seqName=$old."_".$geneName;
+
+		my $codingRegion=$id2info3->{$id};  #增加编码区对应的区域
+		$seqName.="(".$codingRegion.")";
+
+		unless($id2seq3->{$id} eq ''){    #需要考虑序列为空的情况
+			print OUT ">$seqName\n",$id2seq3->{$id},"\n";
+		}
+	}
+}
+close OUT or die"$!";
+
+my $end=time();
+my $timeConsume=$end-$start;
+print "Job done. Time consumes: $timeConsume\n";
+
