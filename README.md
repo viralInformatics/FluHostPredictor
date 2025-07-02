@@ -18,6 +18,7 @@ The `FluHostPredictor` pipeline consists of three primary modules:
 
 ------
 
+
 ## ⚙️ Prerequisites
 
 ### System Dependencies
@@ -34,6 +35,22 @@ conda install -c bioconda diamond=2.1.11
 
 **Direct Binary Download:** Visit the [Diamond official website](https://github.com/bbuchfink/diamond) to download the appropriate version for your system. This tool has been validated with diamond-2.1.11.
 
+#### Git LFS Installation
+
+Git LFS (Large File Storage) is essential for downloading the pre-trained machine learning models and large datasets stored in the repository. Without Git LFS, the tool will not function properly.
+
+**Conda Installation (Recommended):**
+
+```bash
+conda install -c conda-forge git-lfs
+```
+
+**Initialize Git LFS after installation:**
+
+```bash
+git lfs install
+```
+
 ------
 
 ## 🔧 Installation
@@ -44,12 +61,21 @@ conda install -c bioconda diamond=2.1.11
 conda create -n fluhp-env python=3.6
 conda activate fluhp-env
 
-git clone https://github.com/lihuirull/FluHostPredictor
+# Install required dependencies
+conda install -c bioconda diamond=2.1.11
+conda install -c conda-forge git-lfs
 
+# Initialize Git LFS
+git lfs install
+
+# Clone the repository
 git clone https://github.com/viralInformatics/FluHostPredictor
 cd FluHostPredictor
+
+# Install the package
 pip install .
 ```
+
 
 ------
 
