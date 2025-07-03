@@ -1,0 +1,300 @@
+
+Standard Output:
+Job done. Time consumes: 13
+False
+blastSeq ...
+getMostCommonHitProtein ...
+开始翻译
+temp//isolate1.trans2protein.fas.stdName
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/18Mid/translatePerl/translate/DNA2protein6.pl
+perl /data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/18Mid/translatePerl/translate/DNA2protein6.pl temp/isolate1.fasta.stdName /data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/app/blast/bin/ /data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/18Mid/translatePerl/translate/forblast/ temp// /data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/18Mid/translatePerl/data/ /data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/temp//isolate1.trans2protein.fas.stdName /data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/app/mafft/mafft-7.158-without-extensions/scripts/
+Annotation written to ./result/isolate1_annotation_for_anno.csv
+blastSeq ...
+diamond blastp -d /data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/18Mid/standard_seq/allProteinTypeDB/protType_AA -q temp/test2.fa.stdName -o temp//querySeqToProteinTypeDB -e 1e-5 -p 1 --outfmt 6 -k 5
+getMostCommonHitProtein ...
+Annotation written to ./result/test2_annotation_for_anno.csv
+The file test_files/test5 is not in FASTA format or could not be correctly parsed.
+
+Standard Error:
+nthread = 0
+nthreadpair = 0
+nthreadtb = 0
+ppenalty_ex = 0
+stacksize: 8192 kb
+generating a scoring matrix for nucleotide (dist=200) ... done
+Gap Penalty = -1.53, +0.00, +0.00
+
+
+
+Making a distance matrix ..
+
+    1 / 51
+done.
+
+Constructing a UPGMA tree (efffree=1) ... 
+
+    0 / 51
+   10 / 51
+   20 / 51
+   30 / 51
+   40 / 51
+done.
+
+Progressive alignment 1/1... 
+
+STEP     1 / 50  f
+STEP     2 / 50  f
+STEP     3 / 50  f
+STEP     4 / 50  f
+STEP     5 / 50  f
+STEP     6 / 50  f
+STEP     7 / 50  f
+STEP     8 / 50  f
+STEP     9 / 50  f
+STEP    10 / 50  f
+STEP    11 / 50  f
+STEP    12 / 50  f
+STEP    13 / 50  f
+STEP    14 / 50  f
+STEP    15 / 50  f
+STEP    16 / 50  f
+STEP    17 / 50  f
+STEP    18 / 50  f
+STEP    19 / 50  f
+STEP    20 / 50  f
+STEP    21 / 50  f
+STEP    22 / 50  f
+STEP    23 / 50  f
+STEP    24 / 50  f
+STEP    25 / 50  f
+STEP    26 / 50  f
+STEP    27 / 50  f
+STEP    28 / 50  f
+STEP    29 / 50  f
+STEP    30 / 50  f
+STEP    31 / 50  f
+STEP    32 / 50  f
+STEP    33 / 50  f
+STEP    34 / 50  f
+STEP    35 / 50  f
+STEP    36 / 50  f
+STEP    37 / 50  f
+STEP    38 / 50  f
+STEP    39 / 50  f
+STEP    40 / 50  f
+STEP    41 / 50  f
+STEP    42 / 50  f
+STEP    43 / 50  f
+STEP    44 / 50  f
+STEP    45 / 50  f
+STEP    46 / 50  f
+STEP    47 / 50  f
+STEP    48 / 50  f
+STEP    49 / 50  f
+STEP    50 / 50  f
+done.
+
+disttbfast (nuc) Version 7.508
+alg=A, model=DNA200 (2), 1.53 (4.59), -0.00 (-0.00), noshift, amax=0.0
+0 thread(s)
+
+
+Strategy:
+ FFT-NS-1 (Very fast but very rough)
+ Progressive method (rough guide tree was used.)
+
+If unsure which option to use, try 'mafft --auto input > output'.
+For more information, see 'mafft --help', 'mafft --man' and the mafft page.
+
+The default gap scoring scheme has been changed in version 7.110 (2013 Oct).
+It tends to insert more gaps into gap-rich regions than previous versions.
+To disable this change, add the --leavegappyregion option.
+
+nthread = 0
+nthreadpair = 0
+nthreadtb = 0
+ppenalty_ex = 0
+stacksize: 8192 kb
+generating a scoring matrix for nucleotide (dist=200) ... done
+Gap Penalty = -1.53, +0.00, +0.00
+
+
+
+Making a distance matrix ..
+
+    1 / 51
+done.
+
+Constructing a UPGMA tree (efffree=1) ... 
+
+    0 / 51
+   10 / 51
+   20 / 51
+   30 / 51
+   40 / 51
+done.
+
+Progressive alignment 1/1... 
+
+STEP     1 / 50  f
+STEP     2 / 50  f
+STEP     3 / 50  f
+STEP     4 / 50  f
+STEP     5 / 50  f
+STEP     6 / 50  f
+STEP     7 / 50  f
+STEP     8 / 50  f
+STEP     9 / 50  f
+STEP    10 / 50  f
+STEP    11 / 50  f
+STEP    12 / 50  f
+STEP    13 / 50  f
+STEP    14 / 50  f
+STEP    15 / 50  f
+STEP    16 / 50  f
+STEP    17 / 50  f
+STEP    18 / 50  f
+STEP    19 / 50  f
+STEP    20 / 50  f
+STEP    21 / 50  f
+STEP    22 / 50  f
+STEP    23 / 50  f
+STEP    24 / 50  f
+STEP    25 / 50  f
+STEP    26 / 50  f
+STEP    27 / 50  f
+STEP    28 / 50  f
+STEP    29 / 50  f
+STEP    30 / 50  f
+STEP    31 / 50  f
+STEP    32 / 50  f
+STEP    33 / 50  f
+STEP    34 / 50  f
+STEP    35 / 50  f
+STEP    36 / 50  f
+STEP    37 / 50  f
+STEP    38 / 50  f
+STEP    39 / 50  f
+STEP    40 / 50  f
+STEP    41 / 50  f
+STEP    42 / 50  f
+STEP    43 / 50  f
+STEP    44 / 50  f
+STEP    45 / 50  f
+STEP    46 / 50  f
+STEP    47 / 50  f
+STEP    48 / 50  f
+STEP    49 / 50  f
+STEP    50 / 50  f
+done.
+
+disttbfast (nuc) Version 7.508
+alg=A, model=DNA200 (2), 1.53 (4.59), -0.00 (-0.00), noshift, amax=0.0
+0 thread(s)
+
+
+Strategy:
+ FFT-NS-1 (Very fast but very rough)
+ Progressive method (rough guide tree was used.)
+
+If unsure which option to use, try 'mafft --auto input > output'.
+For more information, see 'mafft --help', 'mafft --man' and the mafft page.
+
+The default gap scoring scheme has been changed in version 7.110 (2013 Oct).
+It tends to insert more gaps into gap-rich regions than previous versions.
+To disable this change, add the --leavegappyregion option.
+
+nthread = 0
+nthreadpair = 0
+nthreadtb = 0
+ppenalty_ex = 0
+stacksize: 8192 kb
+generating a scoring matrix for nucleotide (dist=200) ... done
+Gap Penalty = -1.53, +0.00, +0.00
+
+
+
+Making a distance matrix ..
+
+    1 / 51
+done.
+
+Constructing a UPGMA tree (efffree=1) ... 
+
+    0 / 51
+   10 / 51
+   20 / 51
+   30 / 51
+   40 / 51
+done.
+
+Progressive alignment 1/1... 
+
+STEP     1 / 50  f
+STEP     2 / 50  f
+STEP     3 / 50  f
+STEP     4 / 50  f
+STEP     5 / 50  f
+STEP     6 / 50  f
+STEP     7 / 50  f
+STEP     8 / 50  f
+STEP     9 / 50  f
+STEP    10 / 50  f
+STEP    11 / 50  f
+STEP    12 / 50  f
+STEP    13 / 50  f
+STEP    14 / 50  f
+STEP    15 / 50  f
+STEP    16 / 50  f
+STEP    17 / 50  f
+STEP    18 / 50  f
+STEP    19 / 50  f
+STEP    20 / 50  f
+STEP    21 / 50  f
+STEP    22 / 50  f
+STEP    23 / 50  f
+STEP    24 / 50  f
+STEP    25 / 50  f
+STEP    26 / 50  f
+STEP    27 / 50  f
+STEP    28 / 50  f
+STEP    29 / 50  f
+STEP    30 / 50  f
+STEP    31 / 50  f
+STEP    32 / 50  f
+STEP    33 / 50  f
+STEP    34 / 50  f
+STEP    35 / 50  f
+STEP    36 / 50  f
+STEP    37 / 50  f
+STEP    38 / 50  f
+STEP    39 / 50  f
+STEP    40 / 50  f
+STEP    41 / 50  f
+STEP    42 / 50  f
+STEP    43 / 50  f
+STEP    44 / 50  f
+STEP    45 / 50  f
+STEP    46 / 50  f
+STEP    47 / 50  f
+STEP    48 / 50  f
+STEP    49 / 50  f
+STEP    50 / 50  f
+done.
+
+disttbfast (nuc) Version 7.508
+alg=A, model=DNA200 (2), 1.53 (4.59), -0.00 (-0.00), noshift, amax=0.0
+0 thread(s)
+
+
+Strategy:
+ FFT-NS-1 (Very fast but very rough)
+ Progressive method (rough guide tree was used.)
+
+If unsure which option to use, try 'mafft --auto input > output'.
+For more information, see 'mafft --help', 'mafft --man' and the mafft page.
+
+The default gap scoring scheme has been changed in version 7.110 (2013 Oct).
+It tends to insert more gaps into gap-rich regions than previous versions.
+To disable this change, add the --leavegappyregion option.
+

@@ -1,0 +1,511 @@
+
+Standard Output:
+False
+Input File:
+standardized_fasta/isolate1.trans2protein.fasta.stdName.annotation.fa
+       qseqid  oriseqid                      newqseqid GeneType  \
+0   querySeq4   test_NP        querySeq4_NP_NP|test_NP       NP   
+1   querySeq6   test_PA        querySeq6_PA_PA|test_PA       PA   
+2   querySeq6   test_PA      querySeq6_PA-X_PA|test_PA       PA   
+3   querySeq3   test_NA        querySeq3_NA_N6|test_NA       N6   
+4   querySeq1   test_NS       querySeq1_NS1_NS|test_NS       NS   
+5   querySeq1   test_NS       querySeq1_NS2_NS|test_NS       NS   
+6   querySeq2   test_MP        querySeq2_M1_MP|test_MP       MP   
+7   querySeq2   test_MP        querySeq2_M2_MP|test_MP       MP   
+8   querySeq7  test_PB1     querySeq7_PB1_PB1|test_PB1      PB1   
+9   querySeq7  test_PB1  querySeq7_PB1-F2_PB1|test_PB1      PB1   
+10  querySeq5   test_HA        querySeq5_HA_H1|test_HA       H1   
+11  querySeq8  test_PB2     querySeq8_PB2_PB2|test_PB2      PB2   
+
+                           CDS region ProteinType  Unnamed: 6  
+0                         NP(1..1494)          NP         NaN  
+1   PA(1..2148),PA-X(1..570,572..760)          PA         NaN  
+2   PA(1..2148),PA-X(1..570,572..760)        PA-X         NaN  
+3                         NA(3..1376)          N6         NaN  
+4     NS1(1..696),NS2(1..30,488..823)         NS1         NaN  
+5     NS1(1..696),NS2(1..30,488..823)         NS2         NaN  
+6       M1(1..756),M2(1..26,715..982)          M1         NaN  
+7       M1(1..756),M2(1..26,715..982)          M2         NaN  
+8        PB1(1..2271),PB1-F2(95..364)         PB1         NaN  
+9        PB1(1..2271),PB1-F2(95..364)      PB1-F2         NaN  
+10                        HA(1..1698)          H1         NaN  
+11                       PB2(1..2277)         PB2         NaN  
+No markers found for NP in the source data.
+No markers found for PA in the source data.
+No markers found for PA-X in the source data.
+No markers found for NS1 in the source data.
+No markers found for NS2 in the source data.
+No markers found for M1 in the source data.
+No markers found for M2 in the source data.
+No markers found for PB1 in the source data.
+No markers found for PB1-F2 in the source data.
+No markers found for PB2 in the source data.
+
+Marker extracted and saved to file.
+No markers found for M2 in the source data.
+
+Marker extracted and saved to file.
+No markers found for NP in the source data.
+No markers found for PA-X in the source data.
+No markers found for NS1 in the source data.
+No markers found for NS2 in the source data.
+No markers found for M1 in the source data.
+No markers found for PB1 in the source data.
+No markers found for PB1-F2 in the source data.
+No markers found for PB2 in the source data.
+
+Marker extracted and saved to file.
+No markers found for PB1-F2 in the source data.
+
+Marker extracted and saved to file.
+Input File:
+standardized_fasta/isolate2.fasta.stdName.annotation.fa
+        qseqid   oriseqid                 newqseqid Protein Abbreviation  \
+0    querySeq1    EPI8429     querySeq1_PB2|EPI8429                  PB2   
+1    querySeq2    EPI8433     querySeq2_PB1|EPI8433                  PB1   
+2    querySeq3    EPI8435  querySeq3_PB1-F2|EPI8435               PB1-F2   
+3    querySeq4    EPI8437      querySeq4_PA|EPI8437                   PA   
+4    querySeq5    EPI6458      querySeq5_H3|EPI6458                   H3   
+5    querySeq6    EPI8451      querySeq6_NP|EPI8451                   NP   
+6    querySeq7    EPI8463      querySeq7_N2|EPI8463                   N2   
+7    querySeq8    EPI8489      querySeq8_M1|EPI8489                   M1   
+8    querySeq9    EPI8489      querySeq9_M2|EPI8489                   M2   
+9   querySeq10  EPI128404  querySeq10_NS1|EPI128404                  NS1   
+10  querySeq11    EPI8513    querySeq11_NS2|EPI8513                  NS2   
+
+   CDS region ProteinType  
+0        None         PB2  
+1        None         PB1  
+2        None      PB1-F2  
+3        None          PA  
+4        None          H3  
+5        None          NP  
+6        None          N2  
+7        None          M1  
+8        None          M2  
+9        None         NS1  
+10       None         NS2  
+No markers found for PB2 in the source data.
+No markers found for PB1 in the source data.
+No markers found for PB1-F2 in the source data.
+No markers found for PA in the source data.
+No markers found for NP in the source data.
+No markers found for N2 in the source data.
+No markers found for M1 in the source data.
+No markers found for M2 in the source data.
+No markers found for NS1 in the source data.
+No markers found for NS2 in the source data.
+
+Marker extracted and saved to file.
+No markers found for M2 in the source data.
+
+Marker extracted and saved to file.
+No markers found for PB2 in the source data.
+No markers found for PB1 in the source data.
+No markers found for PB1-F2 in the source data.
+No markers found for H3 in the source data.
+No markers found for NP in the source data.
+No markers found for M1 in the source data.
+No markers found for NS1 in the source data.
+No markers found for NS2 in the source data.
+
+Marker extracted and saved to file.
+No markers found for PB1-F2 in the source data.
+
+Marker extracted and saved to file.
+Input File:
+standardized_fasta/isolate3.trans2protein.fasta.stdName.annotation.fa
+       qseqid  oriseqid                      newqseqid GeneType  \
+0   querySeq7  test_PB1     querySeq7_PB1_PB1|test_PB1      PB1   
+1   querySeq7  test_PB1  querySeq7_PB1-F2_PB1|test_PB1      PB1   
+2   querySeq6   test_PA        querySeq6_PA_PA|test_PA       PA   
+3   querySeq6   test_PA      querySeq6_PA-X_PA|test_PA       PA   
+4   querySeq2   test_MP        querySeq2_M1_MP|test_MP       MP   
+5   querySeq2   test_MP        querySeq2_M2_MP|test_MP       MP   
+6   querySeq8  test_PB2     querySeq8_PB2_PB2|test_PB2      PB2   
+7   querySeq3   test_NA        querySeq3_NA_N6|test_NA       N6   
+8   querySeq1   test_NS       querySeq1_NS1_NS|test_NS       NS   
+9   querySeq1   test_NS       querySeq1_NS2_NS|test_NS       NS   
+10  querySeq4   test_NP        querySeq4_NP_NP|test_NP       NP   
+11  querySeq5   test_HA        querySeq5_HA_H1|test_HA       H1   
+
+                           CDS region ProteinType  Unnamed: 6  
+0        PB1(1..2271),PB1-F2(95..364)         PB1         NaN  
+1        PB1(1..2271),PB1-F2(95..364)      PB1-F2         NaN  
+2   PA(1..2148),PA-X(1..570,572..760)          PA         NaN  
+3   PA(1..2148),PA-X(1..570,572..760)        PA-X         NaN  
+4       M1(1..756),M2(1..26,715..982)          M1         NaN  
+5       M1(1..756),M2(1..26,715..982)          M2         NaN  
+6                        PB2(1..2277)         PB2         NaN  
+7                         NA(3..1376)          N6         NaN  
+8     NS1(1..696),NS2(1..30,488..823)         NS1         NaN  
+9     NS1(1..696),NS2(1..30,488..823)         NS2         NaN  
+10                        NP(1..1494)          NP         NaN  
+11                        HA(1..1698)          H1         NaN  
+No markers found for PB1 in the source data.
+No markers found for PB1-F2 in the source data.
+No markers found for PA in the source data.
+No markers found for PA-X in the source data.
+No markers found for M1 in the source data.
+No markers found for M2 in the source data.
+No markers found for PB2 in the source data.
+No markers found for NS1 in the source data.
+No markers found for NS2 in the source data.
+No markers found for NP in the source data.
+
+Marker extracted and saved to file.
+No markers found for M2 in the source data.
+
+Marker extracted and saved to file.
+No markers found for PB1 in the source data.
+No markers found for PB1-F2 in the source data.
+No markers found for PA-X in the source data.
+No markers found for M1 in the source data.
+No markers found for PB2 in the source data.
+No markers found for NS1 in the source data.
+No markers found for NS2 in the source data.
+No markers found for NP in the source data.
+
+Marker extracted and saved to file.
+No markers found for PB1-F2 in the source data.
+
+Marker extracted and saved to file.
+Input File:
+standardized_fasta/test1.fasta.stdName.annotation.fa
+        qseqid  oriseqid                   newqseqid Protein Abbreviation  \
+0    querySeq1  AKF35021       querySeq1_H2|AKF35021                   H2   
+1    querySeq2  AKF35022       querySeq2_M1|AKF35022                   M1   
+2    querySeq3  AKF35023       querySeq3_M2|AKF35023                   M2   
+3    querySeq4  AKF35024       querySeq4_N1|AKF35024                   N1   
+4    querySeq5  AKF35025       querySeq5_NP|AKF35025                   NP   
+5    querySeq6  AKF35026      querySeq6_NS1|AKF35026                  NS1   
+6    querySeq7  AKF35027      querySeq7_NS2|AKF35027                  NS2   
+7    querySeq8  AKF35028       querySeq8_PA|AKF35028                   PA   
+8    querySeq9  AKF35029     querySeq9_PA-X|AKF35029                 PA-X   
+9   querySeq10  AKF35030     querySeq10_PB1|AKF35030                  PB1   
+10  querySeq11  AKF35031  querySeq11_PB1-F2|AKF35031               PB1-F2   
+11  querySeq12  AKF35032     querySeq12_PB2|AKF35032                  PB2   
+
+   CDS region ProteinType  
+0        None          H2  
+1        None          M1  
+2        None          M2  
+3        None          N1  
+4        None          NP  
+5        None         NS1  
+6        None         NS2  
+7        None          PA  
+8        None        PA-X  
+9        None         PB1  
+10       None      PB1-F2  
+11       None         PB2  
+No markers found for M1 in the source data.
+No markers found for M2 in the source data.
+No markers found for NP in the source data.
+No markers found for NS1 in the source data.
+No markers found for NS2 in the source data.
+No markers found for PA in the source data.
+No markers found for PA-X in the source data.
+No markers found for PB1 in the source data.
+No markers found for PB1-F2 in the source data.
+No markers found for PB2 in the source data.
+
+Marker extracted and saved to file.
+No markers found for M2 in the source data.
+
+Marker extracted and saved to file.
+No markers found for M1 in the source data.
+No markers found for NP in the source data.
+No markers found for NS1 in the source data.
+No markers found for NS2 in the source data.
+No markers found for PA-X in the source data.
+No markers found for PB1 in the source data.
+No markers found for PB1-F2 in the source data.
+No markers found for PB2 in the source data.
+
+Marker extracted and saved to file.
+No markers found for PB1-F2 in the source data.
+
+Marker extracted and saved to file.
+Input File:
+standardized_fasta/test2.fa.stdName.annotation.fa
+        qseqid   oriseqid                 newqseqid Protein Abbreviation  \
+0    querySeq1    EPI8429     querySeq1_PB2|EPI8429                  PB2   
+1    querySeq2    EPI8433     querySeq2_PB1|EPI8433                  PB1   
+2    querySeq3    EPI8435  querySeq3_PB1-F2|EPI8435               PB1-F2   
+3    querySeq4    EPI8437      querySeq4_PA|EPI8437                   PA   
+4    querySeq5    EPI6458      querySeq5_H3|EPI6458                   H3   
+5    querySeq6    EPI8451      querySeq6_NP|EPI8451                   NP   
+6    querySeq7    EPI8463      querySeq7_N2|EPI8463                   N2   
+7    querySeq8    EPI8489      querySeq8_M1|EPI8489                   M1   
+8    querySeq9    EPI8489      querySeq9_M2|EPI8489                   M2   
+9   querySeq10  EPI128404  querySeq10_NS1|EPI128404                  NS1   
+10  querySeq11    EPI8513    querySeq11_NS2|EPI8513                  NS2   
+
+   CDS region ProteinType  
+0        None         PB2  
+1        None         PB1  
+2        None      PB1-F2  
+3        None          PA  
+4        None          H3  
+5        None          NP  
+6        None          N2  
+7        None          M1  
+8        None          M2  
+9        None         NS1  
+10       None         NS2  
+No markers found for PB2 in the source data.
+No markers found for PB1 in the source data.
+No markers found for PB1-F2 in the source data.
+No markers found for PA in the source data.
+No markers found for NP in the source data.
+No markers found for N2 in the source data.
+No markers found for M1 in the source data.
+No markers found for M2 in the source data.
+No markers found for NS1 in the source data.
+No markers found for NS2 in the source data.
+
+Marker extracted and saved to file.
+No markers found for M2 in the source data.
+
+Marker extracted and saved to file.
+No markers found for PB2 in the source data.
+No markers found for PB1 in the source data.
+No markers found for PB1-F2 in the source data.
+No markers found for H3 in the source data.
+No markers found for NP in the source data.
+No markers found for M1 in the source data.
+No markers found for NS1 in the source data.
+No markers found for NS2 in the source data.
+
+Marker extracted and saved to file.
+No markers found for PB1-F2 in the source data.
+
+Marker extracted and saved to file.
+Input File:
+standardized_fasta/test3.stdName.annotation.fa
+        qseqid  oriseqid                   newqseqid Protein Abbreviation  \
+0    querySeq1  QJF48033      querySeq1_H10|QJF48033                  H10   
+1    querySeq2  QJF48034       querySeq2_M1|QJF48034                   M1   
+2    querySeq3  QJF48035       querySeq3_M2|QJF48035                   M2   
+3    querySeq4  QJF48036       querySeq4_N1|QJF48036                   N1   
+4    querySeq5  QJF48037       querySeq5_NP|QJF48037                   NP   
+5    querySeq6  QJF48038      querySeq6_NS1|QJF48038                  NS1   
+6    querySeq7  QJF48039      querySeq7_NS2|QJF48039                  NS2   
+7    querySeq8  QJF48040       querySeq8_PA|QJF48040                   PA   
+8    querySeq9  QJF48041     querySeq9_PA-X|QJF48041                 PA-X   
+9   querySeq10  QJF48042     querySeq10_PB1|QJF48042                  PB1   
+10  querySeq11  QJF48043  querySeq11_PB1-F2|QJF48043               PB1-F2   
+11  querySeq12  QJF48044     querySeq12_PB2|QJF48044                  PB2   
+
+   CDS region ProteinType  
+0        None         H10  
+1        None          M1  
+2        None          M2  
+3        None          N1  
+4        None          NP  
+5        None         NS1  
+6        None         NS2  
+7        None          PA  
+8        None        PA-X  
+9        None         PB1  
+10       None      PB1-F2  
+11       None         PB2  
+No markers found for M1 in the source data.
+No markers found for M2 in the source data.
+No markers found for NP in the source data.
+No markers found for NS1 in the source data.
+No markers found for NS2 in the source data.
+No markers found for PA in the source data.
+No markers found for PA-X in the source data.
+No markers found for PB1 in the source data.
+No markers found for PB1-F2 in the source data.
+No markers found for PB2 in the source data.
+
+Marker extracted and saved to file.
+No markers found for M2 in the source data.
+
+Marker extracted and saved to file.
+No markers found for M1 in the source data.
+No markers found for NP in the source data.
+No markers found for NS1 in the source data.
+No markers found for NS2 in the source data.
+No markers found for PA-X in the source data.
+No markers found for PB1 in the source data.
+No markers found for PB1-F2 in the source data.
+No markers found for PB2 in the source data.
+
+Marker extracted and saved to file.
+No markers found for PB1-F2 in the source data.
+
+Marker extracted and saved to file.
+
+Standard Error:
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1743: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  isetter(ilocs[0], value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1743: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  isetter(ilocs[0], value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1596: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  self.obj[key] = _infer_fill_value(value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1743: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  isetter(ilocs[0], value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1743: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  isetter(ilocs[0], value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1596: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  self.obj[key] = _infer_fill_value(value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1743: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  isetter(ilocs[0], value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1596: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  self.obj[key] = _infer_fill_value(value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1743: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  isetter(ilocs[0], value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1596: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  self.obj[key] = _infer_fill_value(value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1743: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  isetter(ilocs[0], value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1743: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  isetter(ilocs[0], value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1596: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  self.obj[key] = _infer_fill_value(value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1743: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  isetter(ilocs[0], value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1743: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  isetter(ilocs[0], value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1743: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  isetter(ilocs[0], value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1596: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  self.obj[key] = _infer_fill_value(value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1743: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  isetter(ilocs[0], value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1743: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  isetter(ilocs[0], value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1596: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  self.obj[key] = _infer_fill_value(value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1743: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  isetter(ilocs[0], value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1596: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  self.obj[key] = _infer_fill_value(value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1743: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  isetter(ilocs[0], value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1596: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  self.obj[key] = _infer_fill_value(value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1743: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  isetter(ilocs[0], value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1743: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  isetter(ilocs[0], value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1596: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  self.obj[key] = _infer_fill_value(value)
+/data/penglab3-20T/lihuiru/miniconda3/envs/fluhp-env/lib/python3.7/site-packages/pandas/core/indexing.py:1743: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  isetter(ilocs[0], value)
