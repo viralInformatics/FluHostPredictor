@@ -122,7 +122,7 @@ fluhp extract -i <input> -a <annotation_path> -o <output_directory> [options]
 
 - `-i, --input` (required): Directory containing standardized FASTA sequences (must match the `-u, --updated_directory` path from the `anno` step)
 - `-a, --anno_path` (required): Directory containing annotation CSV files (must match the `-o, --output_directory` path from the `anno` step) or single annotation file
-- `-o, --output_directory`: Output directory for marker extraction results (default: current directory)
+- `-o, --output_directory`: Output directory for marker extraction results (default: `adaptation/`)
 - `-p, --prefix`: Optional prefix for output filenames
 
 **Example:**
@@ -185,14 +185,14 @@ fluhp predh -i adaptation_markers/strain1_test1_markers.csv -t 0.5 -o prediction
 ### Prediction Output
 
 - Host adaptation class prediction labels for each input strain
-- Prediction probability scores with confidence measures for each input strain
+- Prediction probability scores for each input strain
 - Feature matrix used for model prediction (original input features processed for machine learning analysis)
 
 ------
 
 ## 🤖 Model Information
 
-The prediction module employs ensemble machine learning models trained on curated influenza sequence datasets. The current implementation utilizes a conservative probability threshold to minimize false positive classifications while maintaining high sensitivity for host adaptation detection.
+The prediction module employs ensemble machine learning models trained on curated influenza sequence datasets. 
 
 ------
 

@@ -7,12 +7,12 @@ with open('requirements.txt') as f:
 setup(
     name='fluhp',
     version='1.0.0',
-    author='bioinformatics',
+    author='viralInformatics',
     author_email='pys2013@hnu.edu.cn',
     description="A bioinformatics tool for host prediction of emerging influenza A viruses using genomic sequences.",
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/bioinformatics/FluHostPredictor',
+    url='https://github.com/viralInformatics/FluHostPredictor',
     packages=find_packages(),
     include_package_data=True,
     entry_points={
