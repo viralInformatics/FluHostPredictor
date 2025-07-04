@@ -164,7 +164,7 @@ fluhp extract -i standardized_sequences/ -a annotation_results/ -o adaptation_ma
 fluhp predh -i adaptation_markers/ -t 0.5 -o prediction_results/ -p experiment1
 
 # Or predicting from a specific marker file
-fluhp predh -i adaptation_markers/strain1_test1_markers.csv -t 0.5 -o prediction_results/ -p experiment1
+fluvp predv -i adaptation_markers/strain1_test1_markers.csv -t 0.5 -o prediction_results/ -p experiment1
 ```
 
 ------
